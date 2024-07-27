@@ -1,97 +1,118 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Table</title>
-    <link rel="stylesheet" href="styles.css">
+<title>Timetable</title>
+<style>
+     table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            border: 2px solid #dee2e6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th,
+        td {
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            text-align: center;
+        }
+ 
+        th {
+            background-color: #f2f2f2;
+            color: #343a40;
+        }
+ 
+        .highlight {
+            background-color: #f8f9fa;
+        }
+ 
+        .special {
+            background-color: #f0f0f0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .hidden {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+td:hover .hidden {
+  display: block;
+}
+</style>
 </head>
 <body>
-    <header>
-       <h1>TIME TABLE</h1>
-    </header>
-    <div class="sec">
-        <h2>CSE-C</h2>
-    </div>
-    <section class="tt">
-        <table>
-            <thead class="header">
-            <tr>
-                <th>Day</th>
-                <th>1 <br> 8:00-9:00</th>
-                <th>2 <br> 9:00-9:50</th>
-                <th>9:50-10:10</th>
-                <th>3 <br> 10:10-11:00</th>
-                <th>4 <br> 11:00-11:50</th>
-                <th>5/L <br> 11:50-12:30/12:40</th>
-                <th>L/5 <br> 12:30/12:40-1:20</th>
-                <th>6 <br> 1:20-2:10</th>
-                <th>7 <br> 2:10-3:00</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Tuesday</th>
-                <td class="no-border-right">VAP</td>
-                <td class="no-border-left"></td>
-                <td class="no-border"></td>
-                <td style="padding-left: 50px;">AI19341 - POAI<br><span style="color: red;">A 310</span></td>
-                <td>CS19542 - IP<br><span style="color: red;">A 310</span></td>
-                <td class="lunch">LUNCH</td>
-                <td>CS19501 - TOC<br><span style="color: red;">A 309</span></td>
-                <td class="no-border-right">OAI1903 - RPA<br><span style="color: red;">TLGL2</span></td>
-                <td class="no-border-left"></td>
-            </tr>
-            <tr>
-                <th>Wednesday</th>
-                <td style="padding-left: 60px;">CS19542 - IP<br><span style="color: red;">A 310</span></td>
-                <td>AI19341 - POAI<br><span style="color: red;">A 310</span></td>
-                <td class="no-border"></td>
-                <td class="lunch">LIB</td>
-                <td>LUNCH</td>
-                <td class="no-border-right">CS19541 / AI19341 - CN / POAI LAB<br><span style="color: red;">TLFL3 / TLGL3</span></td>
-                <td class="no-border-left"></td>
-                <td>CS19501 - TOC<br><span style="color: red;">A 309</span></td>
-                <td>CS19541 - CN<br><span style="color: red;">A 310</span></td>
-            </tr>
-            <tr>
-                <th>Thursday</th>
-                <td style="padding-left: 60px;">CS19541 - CN<br><span style="color: red;">A 310</span></td>
-                <td>CS19542 - IP<br><span style="color: red;">A 310</span></td>
-                <td class="no-border" style="transform: rotate(-90deg); font-size: large;"><b>BREAK</b></td>
-                <td class="no-border-right">CS19542 / CS19541 - IP / CN LAB<br><span style="color: red;">TLFL5 / TLFL3</span></td>
-                <td class="no-border-left"></td>
-                <td class="lunch">LUNCH</td>
-                <td style="padding-left: 30px;">COUN<br><span style="color: red;">A 210</span></td>
-                <td class="lunch">NPTEL<br><span style="color: red;">A 210</span></td>
-                <td style="padding-left: 30px;">LIB</td>
-            </tr>
-            <tr>
-                <th>Friday</th>
-                <td class="no-border-right">OAI1903 - RPA<br><span style="color: red;">TLGL2</span></td>
-                <td class="no-border-left"></td>
-                <td class="no-border"></td>
-                <td style="padding-left: 50px;">CS19541 - CN<br><span style="color: red;">A 309</span></td>
-                <td>CS19542 - IP<br><span style="color: red;">A 309</span></td>
-                <td class="lunch">LUNCH</td>
-                <td>CS19501 - TOC<br><span style="color: red;">A 309</span></td>
-                <td class="no-border-right">CS19541 / CS19542 - CN / IP LAB<br><span style="color: red;">TLFL3 / TLFL5</span></td>
-                <td class="no-border-left"></td>
-            </tr>
-            <tr>
-                <th>Saturday</th>
-                <td class="no-border-right">AI19341 / CS19542 - POAI / IP LAB<br><span style="color: red;">TLGL3 / JL1</span></td>
-                <td class="no-border-left"></td>
-                <td class="no-border" style="border-bottom: 2px solid black;"></td>
-                <td style="padding-left: 50px;">AI19341 - POAI<br><span style="color: red;">A 310</span></td>
-                <td>CS19541 - CN<br><span style="color: red;">A 310</span></td>
-                <td class="lunch">LUNCH</td>
-                <td>CS19501 - TOC<br><span style="color: red;">A 309</span></td>
-                <td class="no-border-right">CS19542 / CS19541 - IP / CN LAB<br><span style="color: red;">TLFL5 / TLFL3</span></td>
-                <td class="no-border-left"></td>
-            </tr>
-        </tbody>
-        </table>
-    </section>
+<h1><center>TIMETABLE</center></h1>
+<table>
+    <tr>
+        <th>DAY</th>
+        <th>1<br>8:00-9:00</th>
+        <th>2<br>9:00-9:50</th>
+        <th>9:50-10:10</th>
+        <th>3<br>10:10-11:00</th>
+        <th>4<br>11:00-11:50</th>
+        <th>5<br>11:50-12:30</th>
+        <th>6<br>12:30-1:20</th>
+        <th>7<br>1:20-2:10</th>
+        <th>8<br>2:10-3:00</th>
+    </tr>
+    <tr>
+        <td class="highlight"><b>TUESDAY</b></td>
+        <td colspan="2" style="position: relative;">VAP<span class="hidden">Coursecode:GE19521<br>Staff:Ms.Dharani Devi<br>Staffcode:IT191</span></td>
+        <td rowspan="6" class="special"><b>BREAK</b></td>
+        <td style="position: relative;">POAI<span class="hidden">Coursecode:A119341<br>Staff:Mr.Karthick<br>Staffcode:CS281</span></td>
+        <td style="position: relative;">IP<span class="hidden">Coursecode:CS19542<br>Staff:Ms.Jananee<br>Staffcode:CS182</span></td>
+        <td class="special">LUNCH</td>
+        <td style="position: relative;">TOC<span class="hidden">Coursecode:CS19501<br>Staff:Ms.Adlin Layola<br>Staffcode:IT210</span></td>
+        <td  colspan="2" style="position: relative;">RPA<span class="hidden">Coursecode:OA11903<br>Staff:Ms.Sasikala<br>Staffcode:CS274</span></td>
+    </tr>
+    <tr>
+        <td class="highlight"><b>WEDNESDAY</b></td>
+        <td style="position: relative;">IP<span class="hidden">Coursecode:CS19542<br>Staff:Ms.Jananee<br>Staffcode:CS182</span></td>
+        <td style="position: relative;">POAI<span class="hidden">Coursecode:A119341<br>Staff:Mr.Karthick<br>Staffcode:CS281</span></td>
+        <td style="position: relative;">LIBRARY<span class="hidden">Coursecode:LIB<br>Staff:Ms.Ariyamala<br>Staffcode:CS282</span></td>
+        <td class="special">LUNCH</td>
+        <td colspan="2">CN/POAI LAB</td>
+        <td Style="position: relative;">TOC<span class="hidden">Coursecode:CS19501<br>Staff:Ms.Adlin Layola<br>Staffcode:IT210</span></td>
+        <td style="position: relative;">CN<span class="hidden">Coursecode:CS19541<br>Staff:Mr.Senthil Pandi<br>Staffcode:CS258/CS319</span></td>
+    </tr>
+    <tr>
+        <td class="highlight"><b>THURSDAY</b></td>
+        <td style="position: relative;">CN<span class="hidden">Coursecode:CS19541<br>Staff:Mr.Senthil Pandi<br>Staffcode:CS258/CS319</span></td>
+        <td style="position: relative;">IP<span class="hidden">Coursecode:CS19542<br>Staff:Ms.Jananee<br>Staffcode:CS182</span></td>
+        <td colspan="2">IP/CN LAB</td>
+        <td class="special">LUNCH</td>
+        <td>COUN</td>
+        <td style="position: relative;">NPTEL<span class="hidden">Coursecode:NPTEL<br>Staff:Ms.Dharani Devi<br>Staffcode:IT191</span></td>
+        <td style="position: relative;">LIBRARY<span class="hidden">Coursecode:LIB<br>Staff:Ms.Ariyamala<br>Staffcode:CS282</span></td>
+    </tr>
+    <tr>
+        <td class="highlight"><b>FRIDAY</b></td>
+        <td colspan="2" style="position: relative;">RPA<span class="hidden">Coursecode:OA11903<br>Staff:Ms.Sasikala<br>Staffcode:CS274</span></td>
+        <td style="position: relative;">CN<span class="hidden">Coursecode:CS19541<br>Staff:Mr.Senthil Pandi<br>Staffcode:CS258/CS319</span></td>
+        <td style="position: relative;">IP<span class="hidden">Coursecode:CS19542<br>Staff:Ms.Jananee<br>Staffcode:CS182</span></td>
+        <td class="special">LUNCH</td>
+        <td Style="position: relative;">TOC<span class="hidden">Coursecode:CS19501<br>Staff:Ms.Adlin Layola<br>Staffcode:IT210</span></td>
+        <td colspan="2">CN/IP LAB</td>
+    </tr>
+    <tr>
+        <td class="highlight"><b>SATURDAY</b></td>
+        <td colspan="2">POAI/IP LAB</td>
+        <td style="position: relative;">POAI<span class="hidden">Coursecode:A119341<br>Staff:Mr.Karthick<br>Staffcode:CS281</span></td>
+        <td style="position: relative;">CN<span class="hidden">Coursecode:CS19541<br>Staff:Mr.Senthil Pandi<br>Staffcode:CS258/CS319</span></td>
+        <td class="special">LUNCH</td>
+        <td Style="position: relative;">TOC<span class="hidden">Coursecode:CS19501<br>Staff:Ms.Adlin Layola<br>Staffcode:IT210</span></td>
+        <td colspan="2">IP/CN LAB</td>
+    </tr>
+
+
 </body>
 </html>
